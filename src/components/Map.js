@@ -51,7 +51,6 @@ class Map {
             const { clientX: x, clientY: y } = evt.originalEvent;
             this.tooltip.show();
             this.tooltip.position({ x, y });
-            console.log(feature.properties);
             this.tooltip.setContent(feature.properties);
          }
       });

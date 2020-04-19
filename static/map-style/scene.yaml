@@ -17,7 +17,7 @@ scene:
 global:
   language: en
   language_text_source: "function() { return (global.language && feature['name:'+global.language]) || feature.name;\n}\n"
-  water: "#E1E2E3"
+  water: "#DEE3E0"
   text: "#9B9DA2"
   minor_text: "#AFB1B5"
   text_outline: "#FFF"

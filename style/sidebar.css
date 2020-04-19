@@ -2,8 +2,7 @@
    position: absolute;
    bottom: 15px;
    left: 15px;
-   width: 250px;
-   height: 150px;
+   width: 320px;
    padding: 15px;
    z-index: 50000;
    background: white;
@@ -12,12 +11,21 @@
    flex-direction: column;
    box-shadow: var(--box-shadow);
    border-radius: var(--border-radius);
-   display: none;
+   border-top: 4px solid var(--black);
+   box-sizing: border-box;
 }
 
 .sidebar h1 {
-   font-size: 24px;
+   font-size: 20px;
    margin-top: 0;
+   margin-bottom: 10px;
+   display: inline-block;
+}
+
+.sidebar h2 {
+   font-size: 14px;
+   margin-top: 0;
+   margin-bottom: 10px;
    display: inline-block;
 }
 
@@ -28,4 +36,12 @@
 
 .sidebar .padding {
    padding: var(--spacing);
+}
+
+.legend {
+   display: grid;
+}
+
+.legend .block {
+   height: 15px;
 }

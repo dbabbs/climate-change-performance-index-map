@@ -49,55 +49,9 @@ html {
    width: 100%;
 }
 
-.cropper {
-   /* position: absolute; */
-   left: 0;
-   height: 20px;
-   width: 20px;
-   /* position: relative; */
-   overflow: hidden;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border: 1px solid white;
-}
-
-.cropper img {
-   /* position: absolute; */
-
-   height: 100%;
-   width: auto;
-   /* box-shadow: 0px 0px 2px white; */
-}
-
 .shine-img {
    height: 100%;
    width: auto;
-}
-
-.country-row {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 5px 0;
-   color: var(--gray);
-   font-weight: 500;
-}
-
-.country-row:nth-child(1) {
-   padding-top: 10px;
-}
-
-.pill {
-   font-size: 12px;
-   font-weight: 500;
-   display: inline-block;
-   background: black;
-   padding: 3px 6px;
-   border-radius: var(--border-radius);
-   color: white;
-   text-transform: uppercase;
 }
 
 .shine {
@@ -143,26 +97,21 @@ html {
 /** Mobile
 **/
 @media screen and (max-width: 420px) {
-   html,
-   body {
-      flex-direction: column-reverse;
-      position: fixed;
-   }
-
-   .map-container {
-      /* height: 50%; */
-      width: 100%;
-
-      position: relative;
-   }
    .sidebar {
-      width: 100%;
-      height: auto;
-      flex: 1;
+      width: calc(100vw - var(--spacing) * 2);
    }
+}
 
-   .section-label {
-      display: none;
+@media screen and (max-width: 502px) {
+   .attribution {
+      display: none !important;
+   }
+}
+
+@media screen and (max-width: 650px) {
+   .attribution {
+      grid-template-columns: none !important;
+      grid-template-rows: auto auto !important;
    }
 }
 
@@ -192,24 +141,27 @@ html {
 }
 
 .attribution {
-   display: flex;
+   display: grid;
+   grid-template-columns: auto auto;
+   margin: var(--spacing);
+   grid-gap: var(--spacing);
    position: absolute;
    z-index: 50000;
    bottom: 0;
    right: 0;
-   padding: 10px;
-   /* display: none; */
 }
 
 .attribution a {
    display: block;
-   margin-left: 10px;
-   background: rgba(255, 255, 255, 0.8);
+
+   background: white;
    padding: 4px;
    font-weight: 500;
    color: var(--gray);
    transition: 0.3s all;
    text-decoration: none;
+   box-shadow: var(--box-shadow);
+   border-radius: var(--border-radius);
 }
 .attribution a:hover {
    color: rgb(100, 100, 100);
@@ -219,4 +171,11 @@ a {
    color: rgb(100, 100, 100);
    text-decoration: none;
    font-weight: 500;
+}
+
+.separator {
+   height: 1px;
+   width: 100%;
+   background: rgb(233, 233, 233);
+   margin: 10px 0;
 }

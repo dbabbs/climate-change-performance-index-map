@@ -4,11 +4,12 @@
    z-index: 50000;
    background: white;
    border-radius: var(--border-radius);
+   border-top: 3px solid black;
    box-shadow: var(--box-shadow);
 }
 
 .desktop-tooltip {
-   width: 150px;
+   min-width: 150px;
    display: none;
 }
 
@@ -21,12 +22,6 @@
    transition: 0.3s all;
 }
 
-.tooltip > div {
-   margin-bottom: 5px;
-}
-.tooltip > div:last-child {
-   margin-bottom: 0;
-}
 .tooltip .title-row {
    display: flex;
    align-items: center;
@@ -35,13 +30,26 @@
 
 .tooltip .title {
    font-size: 18px;
-   font-weight: 500;
+   font-weight: 600;
+   margin-right: 20px;
 }
 
 .tooltip .flag {
-   height: 20px;
+   height: 18px;
+   border-radius: 2px;
+   box-shadow: var(--box-shadow);
 }
-.tooltip .description {
-   font-size: 13px;
+
+.tooltip .key {
    color: rgb(150, 150, 150);
+}
+.tooltip .value {
+}
+
+.tooltip .description-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-weight: 500;
+   font-size: 13px;
 }

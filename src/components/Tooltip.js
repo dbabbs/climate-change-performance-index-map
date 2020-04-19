@@ -1,4 +1,5 @@
 import Flag from './Flag.js';
+import colorUtility from '../util/ColorUtility.js';
 
 class Tooltip {
    constructor() {
@@ -27,24 +28,35 @@ class Tooltip {
    }
 
    setContent({ name, code, value }) {
+      this.tooltip.style.borderTop = '4px solid ' + colorUtility.get(value);
       this.tooltip.innerHTML = `
       <div class="title-row">
          <div class="title">${name}</div>
          ${Flag(code)}
       </div>
-      <div class="description">${value} </div>`;
+      <div class="separator"></div>
+      <div class="description-row">
+         <div class="key">CCPI Score</div>
+         <div class="value">${value}</div>
+      </div>`;
    }
 
    setMobileContent({ name, code, value }) {
+      this.mobileTooltip.style.borderTop =
+         '4px solid ' + colorUtility.get(value);
       this.mobileTooltip.innerHTML = `
       <div class="title-row">
          <div class="flex-align">
             ${Flag(code)}
-            <div style="margin-left: 5px" class="title">${name}</div>
+            <div style="margin-left: 10px" class="title">${name}</div>
          </div>
          <img src="./static/icons/close.svg" class="close-button">
       </div>
-      <div class="description">${value} </div>`;
+      <div class="separator"></div>
+      <div class="description-row">
+         <div class="key">CCPI Score</div>
+         <div class="value">${value}</div>
+      </div>`;
       document.querySelector('.close-button').onclick = () => this.hideMobile();
    }
 }

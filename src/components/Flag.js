@@ -4,18 +4,8 @@ function getUrl(code) {
       : `https://restcountries.eu/data/${code.toLowerCase()}.svg`;
 }
 
-const Flag = (code, style = {}) => {
-   const styleString = `style="${Object.keys(style)
-      .map((key) => `${key}: ${style[key]};`)
-      .join('')}"`;
-   return `
-   <div ${styleString} class="cropper ${code === null && 'shine'}">
-      ${
-         code === null
-            ? `<div class="shine-img"></div>`
-            : `<img src="${getUrl(code)}" />`
-      }
-   </div>`;
+const Flag = (code) => {
+   return `<img class="flag" src="${getUrl(code)}" />`;
 };
 
 export default Flag;

@@ -1,6 +1,3 @@
-//500
-const colors = ['#ffffcc', '#c2e699', '#78c679', '#238443'];
-
 const credentials = {
    id: 'gpk6hVhN',
    token: 'AFKCs6eeSxSYhpbswZsUhgA',
@@ -8,7 +5,7 @@ const credentials = {
 };
 
 const center = {
-   lat: 40,
+   lat: 10,
    lng: -0,
 };
 const zoom = 1;
@@ -25,7 +22,6 @@ function embedActive() {
 }
 
 export {
-   colors,
    credentials,
    center,
    zoom,
