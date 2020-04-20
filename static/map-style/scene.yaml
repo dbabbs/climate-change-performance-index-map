@@ -123,8 +123,8 @@ layers:
             weight: 400
             fill: global.country_text
             stroke:
-              color: rgba(255, 255, 255, 0.5)
-              width: 3
+              color: rgba(255, 255, 255, 0.2)
+              width: 1
             size:
               - - 4
                 - 12px

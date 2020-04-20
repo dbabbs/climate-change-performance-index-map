@@ -7,6 +7,21 @@ const map = new Map(tooltip);
 
 import colorUtility from './util/ColorUtility.js';
 
+/**
+ *
+ *
+ *
+ *
+ * TODO::::::
+ *
+ *
+ *
+ *
+ * ADD Datahub attribution
+ *
+ * Refactor into sidebar class
+ */
+
 (async () => {
    const codes = data.map((x) => x.code);
    const vals = data.map((x) => x.value);
@@ -59,7 +74,7 @@ function constructLegend({ min, max }) {
 
       const label = document.createElement('p');
       label.style.display = 'block';
-      label.innerText = ranges[i].toFixed(0);
+      label.innerText = colorUtility.getLabels()[i];
       legendText.appendChild(label);
    }
 }

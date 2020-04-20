@@ -3,14 +3,9 @@ class ColorUtility {
       this.min = 0;
       this.max = 0;
 
-      this.colors = [
-         '#d73027',
-         '#fc8d59',
-         '#fee08b',
-         '#d9ef8b',
-         '#91cf60',
-         '#1a9850',
-      ];
+      this.colors = ['#d7191c', '#fdae61', '#ffffbf', '#a6d96a', '#1a9641'];
+      this.range = [41.17, 48.05, 60.6, 75.77];
+      this.labels = ['Very Low', 'Low', 'Medium', 'High'];
    }
 
    getColors() {
@@ -22,17 +17,16 @@ class ColorUtility {
       this.max = max;
    }
 
+   getLabels() {
+      return this.labels;
+   }
+
    getRange() {
-      const steps = this.colors.length;
-      const interval = (this.max - this.min) / steps;
-      const intervals = Array(steps)
-         .fill(0)
-         .map((x, i) => this.min + (i + 1) * interval);
-      return intervals;
+      return this.range;
    }
 
    get(val) {
-      const intervals = this.getRange();
+      const intervals = this.range;
       for (let i = 0; i < intervals.length; i++) {
          if (val <= intervals[i]) {
             return this.colors[i];
