@@ -24,17 +24,26 @@ import colorUtility from './util/ColorUtility.js';
       .forEach((country) => {
          map.addObject(country);
       });
+   removeShine();
 })();
 
+function removeShine() {
+   const nodes = document.querySelectorAll('.shine');
+   [...nodes].forEach((node) => {
+      node.classList.remove('shine');
+   });
+}
+
 function constructLegend({ min, max }) {
-   const sidebar = document.querySelector('.sidebar');
-   const node = document.createElement('div');
-   node.classList.add('legend');
    const ranges = colorUtility.getRange();
    const colors = colorUtility.getColors();
-   node.style.gridTemplateColumns = `repeat(${ranges.length}, 1fr)`;
+
+   const legend = document.querySelector('.legend');
+   const legendText = document.querySelector('.legend-text');
+
+   legend.style.gridTemplateColumns = `repeat(${ranges.length}, 1fr)`;
+   legendText.style.gridTemplateColumns = `repeat(${ranges.length}, 1fr)`;
    for (let i = 0; i < ranges.length; i++) {
-      const container = document.createElement('div');
       const block = document.createElement('div');
 
       if (i == 0) {
@@ -46,16 +55,11 @@ function constructLegend({ min, max }) {
       }
       block.classList.add('block');
       block.style.background = colors[i];
+      legend.appendChild(block);
 
       const label = document.createElement('p');
       label.style.display = 'block';
-      label.style.marginTop = '5px';
       label.innerText = ranges[i].toFixed(0);
-
-      container.appendChild(block);
-      container.appendChild(label);
-      node.appendChild(container);
+      legendText.appendChild(label);
    }
-
-   sidebar.appendChild(node);
 }

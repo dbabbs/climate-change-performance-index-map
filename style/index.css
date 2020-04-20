@@ -68,6 +68,7 @@ html {
    /* display: inline-block; */
    position: relative;
    color: transparent !important;
+   display: inline;
 
    animation-duration: 1s;
    animation-fill-mode: forwards;
@@ -76,8 +77,9 @@ html {
    animation-timing-function: linear;
 }
 
-.shine div {
+.shine * {
    visibility: hidden;
+   color: rgba(0, 0, 0, 0);
 }
 
 .shine a {
