@@ -1,7 +1,7 @@
 const credentials = {
    id: 'gpk6hVhN',
    token: 'AFKCs6eeSxSYhpbswZsUhgA',
-   apikey: 'qHbGACVC8wUgzipkERYFIvbK8ASY9UhPsKSGTB7quRI',
+   apikey: 'ZPsPkW20penY5wYBXiQF5PYIZs22XVSNMiykcJ0cwRw',
 };
 
 const center = {
