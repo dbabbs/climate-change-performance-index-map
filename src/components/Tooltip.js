@@ -1,5 +1,5 @@
 import Flag from './Flag.js';
-import colorUtility from '../util/ColorUtility.js';
+import vizManager from '../util/VizManager.js';
 
 class Tooltip {
    constructor() {
@@ -28,7 +28,7 @@ class Tooltip {
    }
 
    setContent({ name, code, value }) {
-      this.tooltip.style.borderTop = '4px solid ' + colorUtility.get(value);
+      this.tooltip.style.borderTop = '4px solid ' + vizManager.get(value);
       this.tooltip.innerHTML = `
       <div class="title-row">
          <div class="title">${name}</div>
@@ -42,8 +42,7 @@ class Tooltip {
    }
 
    setMobileContent({ name, code, value }) {
-      this.mobileTooltip.style.borderTop =
-         '4px solid ' + colorUtility.get(value);
+      this.mobileTooltip.style.borderTop = '4px solid ' + vizManager.get(value);
       this.mobileTooltip.innerHTML = `
       <div class="title-row">
          <div class="flex-align">

@@ -1,4 +1,4 @@
-class ColorUtility {
+class VizManager {
    constructor() {
       this.min = 0;
       this.max = 0;
@@ -36,6 +36,6 @@ class ColorUtility {
    }
 }
 
-const util = new ColorUtility();
+const util = new VizManager();
 
 export default util;

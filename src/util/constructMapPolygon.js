@@ -1,11 +1,11 @@
 import hexToRgba from './hexToRgba.js';
-import colorUtility from './ColorUtility.js';
+import vizManager from './VizManager.js';
 
 export function createObjectStyle(value) {
-   const color = colorUtility.get(value);
+   const color = vizManager.get(value);
    return {
       fillColor: hexToRgba(color, 0.9),
-      strokeColor: 'rgb(150, 150, 150)', //hexToRgba(color, 1),
+      strokeColor: 'rgb(175, 175, 175)', //hexToRgba(color, 1),
       lineWidth: 1,
       zIndex: -1,
    };

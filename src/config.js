@@ -8,25 +8,13 @@ const center = {
    lat: 10,
    lng: -0,
 };
-const zoom = 1;
+const zoom = 2;
 const minZoom = 1;
-const maxZoom = 4;
+const maxZoom = 5;
 
 function mobileActive() {
-   const mobileWidth = 420;
+   const mobileWidth = 500;
    return window.innerWidth <= mobileWidth;
 }
 
-function embedActive() {
-   return !mobileActive() && window.innerHeight < 700;
-}
-
-export {
-   credentials,
-   center,
-   zoom,
-   minZoom,
-   maxZoom,
-   mobileActive,
-   embedActive,
-};
+export { credentials, center, zoom, minZoom, maxZoom, mobileActive };

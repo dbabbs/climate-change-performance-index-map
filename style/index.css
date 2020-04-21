@@ -98,22 +98,20 @@ html {
 
 /** Mobile
 **/
-@media screen and (max-width: 420px) {
+
+@media screen and (max-width: 500px) {
    .sidebar {
       width: calc(100vw - var(--spacing) * 2);
    }
-}
-
-@media screen and (max-width: 502px) {
    .attribution {
       display: none !important;
    }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 752px) {
    .attribution {
       grid-template-columns: none !important;
-      grid-template-rows: auto auto !important;
+      grid-template-rows: auto auto auto !important;
    }
 }
 
@@ -144,7 +142,7 @@ html {
 
 .attribution {
    display: grid;
-   grid-template-columns: auto auto;
+   grid-template-columns: auto auto auto;
    margin: var(--spacing);
    grid-gap: var(--spacing);
    position: absolute;
@@ -173,6 +171,10 @@ a {
    color: rgb(100, 100, 100);
    text-decoration: none;
    font-weight: 500;
+}
+
+a:hover {
+   color: var(--black);
 }
 
 .separator {
