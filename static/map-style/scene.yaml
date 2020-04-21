@@ -99,14 +99,6 @@ layers:
         translucent-lines:
           color: global.country_boundary
           width: 1.75px
-    region:
-      filter:
-        kind: region
-        kind_detail: [3, 4]
-      draw:
-        translucent-lines:
-          color: global.region_boundary
-          width: 1.5px
   places:
     data:
       source: omv

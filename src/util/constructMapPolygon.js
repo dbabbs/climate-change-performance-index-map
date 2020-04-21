@@ -5,8 +5,8 @@ export function createObjectStyle(value) {
    const color = vizManager.get(value);
    return {
       fillColor: hexToRgba(color, 0.9),
-      strokeColor: 'rgb(175, 175, 175)', //hexToRgba(color, 1),
-      lineWidth: 1,
+      strokeColor: '#CCCDCF', //hexToRgba(color, 1),
+      lineWidth: 1.5,
       zIndex: -1,
    };
 }

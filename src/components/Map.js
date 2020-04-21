@@ -87,11 +87,20 @@ class Map {
                style.removeEventListener('change', changeListener);
                map.addLayer(this.objectLayer);
 
+               // const boundaries = new H.map.Style(
+               //    style.extractConfig('boundaries')
+               // );
+               // const boundariesLayer = this.platform
+               //    .getOMVService()
+               //    .createLayer(boundaries);
+               // map.addLayer(boundariesLayer);
+
                const labels = new H.map.Style(style.extractConfig('places'));
                const labelsLayer = this.platform
                   .getOMVService()
                   .createLayer(labels);
                map.addLayer(labelsLayer);
+
                resolve();
             }
          };
