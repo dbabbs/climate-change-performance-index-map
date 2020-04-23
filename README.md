@@ -1,4 +1,4 @@
-# Earth Day
+# Climate Change Performance Index Map
 
 To run the project, set up a local server:
 
